@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    background-color: #d9dcd6;
+}
+
+/*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
+/*The selectors of .navbar defines top header and nav links*/
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center; 
+    background-color: #7395CD;
+    padding: 20px;
+  }
+
+/*Name size and color on header*/
+#h1 {
+    font-size: 48px;
+    font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
+    color: #ffffff;
+}
+
+#navbarlinks {
+    font-size: 20px;
+}
+
+#navbarlinks li {
+    display:inline-block;
+    padding: 0px 10px;
+}
+
+#navbarlinks a {
+    text-decoration:none;
+    color: #030303;
+    padding-right: 10px;
+}
+
+.figure {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    /*image from: Clark Van Der Beken https://unsplash.com/@snapsbyclark at https://unsplash.com/t/textures-patterns*/
+    background-image: url("../images/clark-van-der-beken-VG-sZboOEzI-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+  
