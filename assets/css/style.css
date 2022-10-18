@@ -1,3 +1,11 @@
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+:root {
+    /* declare a variable with `--` syntax */
+    --dark: #7395CD;
+    --light: #fff;
+    --dark-text-color: #032033;
+  }
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,7 +14,7 @@
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    background-color: #ffffff;
+    background-color: var(--light);
 }
 
 /*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
@@ -15,15 +23,15 @@ body {
     display:flex;
     justify-content:space-between;
     align-items:center; 
-    background-color: #7395CD;
+    background-color: var(--dark);
     padding: 20px;
   }
 
 /*Name size and color on header*/
-#h1 {
+h1 {
     font-size: 48px;
     font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
-    color: #ffffff;
+    color: var(--light);
 }
 
 #navbarlinks {
@@ -37,17 +45,75 @@ body {
 
 #navbarlinks a {
     text-decoration:none;
-    color: #030303;
+    color: var(--dark-text-color);
     padding-right: 10px;
 }
 
-.figure {
-    height: 200px;
+.hero-image {
+    height: 300px;
     width: 100%;
     margin-bottom: 25px;
-    /*image from: Clark Van Der Beken https://unsplash.com/@snapsbyclark at https://unsplash.com/t/textures-patterns*/
+    /*Image courtesy of: Clark Van Der Beken https://unsplash.com/@snapsbyclark at https://unsplash.com/t/textures-patterns*/
     background-image: url("../images/clark-van-der-beken-VG-sZboOEzI-unsplash.jpg");
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.hero-text {
+    font-size: 48px;
+    text-align: end;
+    vertical-align: bottom;
+}/*TODO: can't get the text to align at the bottom right*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+}
+
+
+.about {
+    width: 20%;
+    height: 100%;
+    margin-left: 10px;
+    border-right: #032033;
+    color: var(--dark-text-color);
+}
+
+.project {
+
+
+}
+
+.contact {
+display: inline-block;
+list-style: none;
+}
+
+.resume {
+ display:inline-block;
+ list-style: none;
+}
+
+/* Changes the width of the cards so they split into one columns at 768px or smaller*/
+/* Credit: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+@media screen and (min-width: 768px) {
+    .card {
+      width: 100%;
+    }
+}
+/* Changes the width of the cards so they split into one columns at 768px or larger*/
+@media screen and (max-width: 768px) {
+    .card {
+      width: 50%;
+    }
+}
+  /* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
+@media screen and (max-width: 992px) {
+    .card {
+      width: 100%;
+    }
 }
   
