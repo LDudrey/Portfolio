@@ -34,6 +34,15 @@ h1 {
     color: var(--light);
 }
 
+/*All navbar classes define the top right nav links*/
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: var(--dark);
+    padding: 20px;
+  }
+
 #navbarlinks {
     font-size: 20px;
 }
@@ -49,6 +58,7 @@ h1 {
     padding-right: 10px;
 }
 
+/*Decorative image under navbar*/
 .hero-image {
     height: 300px;
     width: 100%;
@@ -57,18 +67,46 @@ h1 {
     background-image: url("../images/clark-van-der-beken-VG-sZboOEzI-unsplash.jpg");
     background-size: cover;
     background-position: center;
-    position: relative;
 }
-
+/*Styling for Front End Web Developer text*/
 .hero-text {
     font-size: 48px;
+    padding: 225px 10px 0 0;
     text-align: end;
-    vertical-align: bottom;
-}/*TODO: can't get the text to align at the bottom right*/
+    color: var(--light);
+}
+
+/*Defining basic flexbox row for containers"*/
+.row {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*Defining basic flexbox column for containers"*/
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    /*flex: 1;*/
+}
+
+/*Styling for left side titles*/
+.directory {
+    font-size: 2em;
+    width: 30%;
+    justify-content: right;
+    color: var(--dark-text-color);
+    border-right: #032033;
+}
+p {
+
+}
+
 
 .container {
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
     width: 100%;
     padding: 0px 20px 20px 20px;
 }
@@ -84,20 +122,18 @@ h1 {
     color: var(--dark-text-color);
 }
 
-.directory {
-    font-size: 2em;
-    width: 30%;
-    color: var(--dark-text-color);
-    border-right: #032033;
+/*defining flexbox style for images*/
+.card {
+    flex: 1 1 0;
+}
+
+.big-card {
+    transform: rotate(90deg);
+    flex: 1 1 0;
 }
 
 
-.about p {
-
-
-
-}
-
+/*Styling for contact me and resume sections*/
 li {
 display: inline-block;
 padding: 5%;
