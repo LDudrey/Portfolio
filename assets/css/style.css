@@ -1,9 +1,9 @@
 /* Color and padding*/
 :root {
     /* declare a variable with `--` syntax */
-    --dark: #7395CD;
+    --dark: #09488b;
     --light: #fff;
-    --dark-text-color: #032033;
+    --dark-text-color: #061f5e;
 }
 
 /*No margins or padding for main page*/
@@ -18,18 +18,18 @@ body {
     background-color: var(--light);
 }
 
+/*Avatar image styling*/
 .avatar {
-    max-width: 100%;
-    height: auto;
     border-radius: 50%;
 }
-/*Main Portfolio name*/
+
+/*Main Portfolio name styling*/
 h1 {
-    font-size: 48px;
-    text-align: start;
+    font-size: 3em;
     font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
     color: var(--light);
 }
+/*.avatar
 
 /*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
 /*The selectors of .navbar defines top header and nav links*/
@@ -52,17 +52,18 @@ h1 {
 
 #navbarlinks a {
     text-decoration:none;
-    color: var(--dark-text-color);
+    color: var(--light);
     padding-right: 10px;
 }
 
 /*Decorative image under navbar*/
 .hero-image {
-    height: 300px;
+    height:300px;
     width: 100%;
     margin-bottom: 25px;
-    /*Image courtesy of: Clark Van Der Beken https://unsplash.com/@snapsbyclark at https://unsplash.com/t/textures-patterns*/
-    background-image: url("../images/clark-van-der-beken-VG-sZboOEzI-unsplash.jpg");
+    /*Image courtesy of: Fabrizio Conti 
+    https://unsplash.com/@conti_photos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">*/
+    background-image: url("../images/fabrizio-conti-kXVogATbFgA-unsplash\ \(2\).jpg");
     background-size: cover;
     background-position: center;
 }
@@ -75,7 +76,7 @@ h1 {
 }
 /*Flexbox for About Me section*/
 .about {
-    display:flex;
+    display: flex;
     padding: 10px;
     width: 100%;
 }
@@ -86,11 +87,53 @@ h1 {
     padding-right: 10px;
     flex: 1;
     text-align: end;
-    border-right: 3px solid var(--dark) ;
+    border-right: 3px solid var(--dark);
 }
 
 .about p {
-    margin: 10px;
+    margin: 30px;
     font-size: 24px;
     flex: 2;
 }
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-title {
+    font-size: 36px;
+    margin: 10px;
+    padding-right: 10px;
+    flex: 1;
+    text-align: end;
+    border-right: 3px solid var(--dark);
+}
+
+.project-bigcard {
+    margin: 30px;
+    flex: 2;
+}
+
+.project-card {
+    margin: 30px;
+    flex: 1;
+}
+
+.card-header {
+    border: 3px solid;
+    border-radius: 8px;
+    border-color: var(--light);
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    margin-top: 20px;
+}
+
+Photo by https://unsplash.com/@clairebrear?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Claire Brear
+Photo by https://unsplash.com/es/@vladimir__film?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vladimir Malyutin
+Photo by https://unsplash.com/@angro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antonio Grosz
+Photo by https://unsplash.com/@drscythe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dominik Scythe
+        
