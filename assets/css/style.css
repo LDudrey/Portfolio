@@ -38,11 +38,12 @@ h1 {
     justify-content: space-between;
     align-items:center;
     background-color: var(--dark);
+    width: 100vw;
     padding: 20px;
 }
 
 #navbarlinks {
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 #navbarlinks li {
@@ -59,7 +60,7 @@ h1 {
 /*Decorative image under navbar*/
 .hero-image {
     height:300px;
-    width: 100%;
+    width: 100vw;
     margin-bottom: 25px;
     /*Image courtesy of: Fabrizio Conti 
     https://unsplash.com/@conti_photos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">*/
@@ -69,7 +70,7 @@ h1 {
 }
 /*Styling for Front End Web Developer text*/
 .hero-text {
-    font-size: 48px;
+    font-size: 3em;
     padding: 225px 10px 0 0;
     text-align: end;
     color: var(--light);
@@ -78,11 +79,10 @@ h1 {
 .about {
     display: flex;
     padding: 10px;
-    width: 100%;
 }
 
 .about-title {
-    font-size: 36px;
+    font-size: 2.3em;
     margin: 10px;
     padding-right: 10px;
     flex: 1;
@@ -91,6 +91,7 @@ h1 {
 }
 
 .about p {
+    flex: 2;
     margin: 30px;
     font-size: 24px;
     flex: 2;
@@ -99,12 +100,12 @@ h1 {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    padding: 10px;
+    width: 100vw;
 }
 
 .project-title {
-    font-size: 36px;
+    font-size: 2.3em;
     margin: 10px;
     padding-right: 10px;
     flex: 1;
@@ -130,6 +131,26 @@ h1 {
     color: var(--light);
     text-align: center;
     margin-top: 20px;
+}
+
+/* Changes the width of the cards so they split into one columns at 768px or smaller*/
+/* Credit: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+}
+/* Changes the width of the cards so they split into one columns at 768px or larger*/
+@media screen and (max-width: 768px) {
+    body {
+      width: 50%;
+    }
+}
+  /* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
+@media screen and (max-width: 992px) {
+    body {
+      width: 100%;
+    }
 }
 
 Photo by https://unsplash.com/@clairebrear?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Claire Brear
