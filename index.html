@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Set meta http-equiv="content-security-policy|content-type|default-style|refresh"-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Lydia Dudrey's Portfolio</title>
@@ -12,6 +11,9 @@
 <body>
     <header>
         <div class="navbar">
+            <div>
+                <img class="avatar" src="./assets/images/face_co.png" alt="Avatar image" width="100px" height="100px">
+            </div>
             <h1>Lydia Dudrey</h1>
             <nav id="navbarlinks">
                 <ul>
@@ -28,8 +30,8 @@
         <div class=hero-text>Front End Web Developer</div>
     </div>
     <main>
-        <section class="row">
-            <h3 class="directory">About Me</h3>
+        <div class="about">
+            <h3 class="about-title">About Me</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -39,35 +41,24 @@
                     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-        </section>
-        <section class="row">
+            </div>
+        <div class="row">
             <h3 class="directory">Projects</h3>
-                <div>
-                    <section>
-                        <div class="big-card">
-                            <img src="assets/images/susan-wilkinson-zdNy1uM-H9Y-unsplash.jpg" alt="abstract acrylic pour painting">
-                        </div>
-                    </section>
-                </div>
-                <div>
-                    <section>
-                        <div class="card">
-                            <img src="assets/images/susan-wilkinson-eR4ira0Jgvw-unsplash (1).jpg" alt="abstract acrylic pour painting">
-                        </div>
-                    </section>
-                    <section>
-                        <div> 
-                            <img src="assets/images/susan-wilkinson-B_6bjLICFls-unsplash.jpg" alt="abstract acrylic pour painting">
-                        </div>
-                    </section>
-                    <section>
-                            <div>image</div>
-                    </section>
-                    <section>
-                            <div>image</div>
-                    </section>
-                </div>
-            <section class="row">
+                <div class="big-card">
+                    <div>
+                        <img src="assets/images/susan-wilkinson-zdNy1uM-H9Y-unsplash.jpg" alt="abstract acrylic pour painting">
+                    </div>
+                </div> 
+                <div> 
+                    <div class="card">
+                        <img src="assets/images/susan-wilkinson-eR4ira0Jgvw-unsplash (1).jpg" alt="abstract acrylic pour painting">
+                    </div>
+                    <div class="card">  
+                        <img src="assets/images/susan-wilkinson-B_6bjLICFls-unsplash.jpg" alt="abstract acrylic pour painting">
+                    </div>
+                </div>     
+        </div>
+            <div class="row">
                 <div id="contact-me">
                     <h3 class="directory">Contact Me</h3>
                     <ul>

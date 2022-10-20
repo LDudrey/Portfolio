@@ -1,11 +1,12 @@
-/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+/* Color and padding*/
 :root {
     /* declare a variable with `--` syntax */
     --dark: #7395CD;
     --light: #fff;
     --dark-text-color: #032033;
-  }
+}
 
+/*No margins or padding for main page*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -17,31 +18,28 @@ body {
     background-color: var(--light);
 }
 
-/*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
-/*The selectors of .navbar defines top header and nav links*/
-.navbar {
-    display:flex;
-    justify-content:space-between;
-    align-items:center; 
-    background-color: var(--dark);
-    padding: 20px;
-  }
-
-/*Name size and color on header*/
+.avatar {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+/*Main Portfolio name*/
 h1 {
     font-size: 48px;
+    text-align: start;
     font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
     color: var(--light);
 }
 
-/*All navbar classes define the top right nav links*/
+/*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
+/*The selectors of .navbar defines top header and nav links*/
 .navbar {
     display:flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items:center;
     background-color: var(--dark);
     padding: 20px;
-  }
+}
 
 #navbarlinks {
     font-size: 20px;
@@ -75,89 +73,24 @@ h1 {
     text-align: end;
     color: var(--light);
 }
-
-/*Defining basic flexbox row for containers"*/
-.row {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+/*Flexbox for About Me section*/
+.about {
+    display:flex;
+    padding: 10px;
     width: 100%;
 }
 
-/*Defining basic flexbox column for containers"*/
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    /*flex: 1;*/
+.about-title {
+    font-size: 36px;
+    margin: 10px;
+    padding-right: 10px;
+    flex: 1;
+    text-align: end;
+    border-right: 3px solid var(--dark) ;
 }
 
-/*Styling for left side titles*/
-.directory {
-    font-size: 2em;
-    width: 30%;
-    justify-content: right;
-    color: var(--dark-text-color);
-    border-right: #032033;
+.about p {
+    margin: 10px;
+    font-size: 24px;
+    flex: 2;
 }
-p {
-
-}
-
-
-.container {
-    /*display: flex;*/
-    width: 100%;
-    padding: 0px 20px 20px 20px;
-}
-
-.about
-.contact
-.resume {
-    width: 20%;
-    height: 100%;
-    margin-left: 10px;
-    text-align: left;
-    border-right: #032033;
-    color: var(--dark-text-color);
-}
-
-/*defining flexbox style for images*/
-.card {
-    flex: 1 1 0;
-}
-
-.big-card {
-    transform: rotate(90deg);
-    flex: 1 1 0;
-}
-
-
-/*Styling for contact me and resume sections*/
-li {
-display: inline-block;
-padding: 5%;
-font-size: 1.5em;
-list-style: none;
-}
-
-/* Changes the width of the cards so they split into one columns at 768px or smaller*/
-/* Credit: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
-@media screen and (min-width: 768px) {
-    .card {
-      width: 100%;
-    }
-}
-/* Changes the width of the cards so they split into one columns at 768px or larger*/
-@media screen and (max-width: 768px) {
-    .card {
-      width: 50%;
-    }
-}
-  /* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
-@media screen and (max-width: 992px) {
-    .card {
-      width: 100%;
-    }
-}
-  

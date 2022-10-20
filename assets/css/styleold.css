@@ -1,0 +1,139 @@
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+:root {
+    --dark: #7395CD;
+    --light: #fff;
+    --dark-text-color: #032033;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    background-color: var(--light);
+}
+
+/*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
+/*The selectors of .navbar defines top header and nav links*/
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center; 
+    background-color: var(--dark);
+    padding: 20px;
+  }
+
+/*Name size and color on header*/
+h1 {
+    font-size: 48px;
+    font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
+    color: var(--light);
+}
+
+/*All navbar classes define the top right nav links*/
+
+#navbarlinks {
+    font-size: 20px;
+}
+
+#navbarlinks li {
+    display:inline-block;
+    padding: 0px 10px;
+}
+
+#navbarlinks a {
+    text-decoration:none;
+    color: var(--dark-text-color);
+    padding-right: 10px;
+}
+
+/*Decorative image under navbar*/
+.hero-image {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    /*Image courtesy of: Clark Van Der Beken https://unsplash.com/@snapsbyclark at https://unsplash.com/t/textures-patterns*/
+    background-image: url("../images/clark-van-der-beken-VG-sZboOEzI-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+/*Styling for Front End Web Developer text*/
+.hero-text {
+    font-size: 48px;
+    padding: 225px 10px 0 0;
+    text-align: end;
+    color: var(--light);
+}*/
+
+/*Defining basic flexbox row for containers"*/
+.row {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*Defining basic flexbox column for containers"*/
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    /*flex: 1;*/
+}
+
+/*Styling for left side titles*/
+.directory {
+    font-size: 2em;
+    width: 30%;
+    justify-content: right;
+    color: var(--dark-text-color);
+    border-right: #032033;
+}
+
+/*defining flexbox style for images*/
+.big-card {
+    margin: 5px;
+    transform: rotate(90deg);
+    max-width: 70%;
+    border: 2px solid black;
+}
+
+.card {
+    margin: 5px;
+    max-width: 100px;
+    transform: rotate(90deg);
+    border: 2px solid black;
+    /*flex: 1 1 0;*/
+}
+
+/*Styling for contact me and resume sections*/
+li {
+display: inline-block;
+padding: 5%;
+font-size: 1.5em;
+list-style: none;
+}
+
+/* Changes the width of the cards so they split into one columns at 768px or smaller*/
+/* Credit: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+@media screen and (min-width: 768px) {
+    .card {
+      width: 100%;
+    }
+}
+/* Changes the width of the cards so they split into one columns at 768px or larger*/
+@media screen and (max-width: 768px) {
+    .card {
+      width: 50%;
+    }
+}
+  /* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
+@media screen and (max-width: 992px) {
+    .card {
+      width: 100%;
+    }
+}
+  
