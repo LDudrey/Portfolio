@@ -18,18 +18,12 @@ body {
     background-color: var(--light);
 }
 
-/*Avatar image styling*/
-.avatar {
-    border-radius: 50%;
-}
-
 /*Main Portfolio name styling*/
 h1 {
     font-size: 3em;
     font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
     color: var(--light);
 }
-/*.avatar
 
 /*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
 /*The selectors of .navbar defines top header and nav links*/
@@ -59,42 +53,48 @@ h1 {
 
 /*Decorative image under navbar*/
 .hero-image {
-    height:300px;
-    width: 100vw;
-    margin-bottom: 25px;
+    display: flex;
+    flex: 1;
     /*Image courtesy of: Fabrizio Conti 
     https://unsplash.com/@conti_photos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">*/
     background-image: url("../images/fabrizio-conti-kXVogATbFgA-unsplash\ \(2\).jpg");
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 }
+ 
 /*Styling for Front End Web Developer text*/
 .hero-text {
     font-size: 3em;
-    padding: 225px 10px 0 0;
+    padding: 225px 50px 0 0;
     text-align: end;
     color: var(--light);
 }
+
+/*Avatar image styling*/
+.avatar {
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+}
+
+/*Directory on left side*/
+.title {
+    font-size: 2.1em;
+    margin: 10px;
+    padding-right: 10px;
+    flex-basis: 25%;
+    text-align: end;
+    border-right: 3px solid var(--dark);
+}
+
 /*Flexbox for About Me section*/
 .about {
     display: flex;
     padding: 10px;
 }
-
-.about-title {
-    font-size: 2.3em;
-    margin: 10px;
-    padding-right: 10px;
-    flex: 1;
-    text-align: end;
-    border-right: 3px solid var(--dark);
-}
-
 .about p {
-    flex: 2;
+    flex: 1;
     margin: 30px;
     font-size: 24px;
-    flex: 2;
 }
 
 .projects {
@@ -104,23 +104,33 @@ h1 {
     width: 100vw;
 }
 
+/*Overlay for projec titles*/
 .project-title {
-    font-size: 2.3em;
+    font-size: 2.1em;
     margin: 10px;
     padding-right: 10px;
-    flex: 1;
+    flex-basis: 25%;
     text-align: end;
     border-right: 3px solid var(--dark);
 }
 
-.project-bigcard {
-    margin: 30px;
-    flex: 2;
-}
-
 .project-card {
+    display: flex;
+    flex-wrap: wrap;
     margin: 30px;
     flex: 1;
+}
+
+.small-images {
+    width: 50%;
+}
+
+.big-image {
+    width: 100%;
+}
+
+img {
+    width: 100%;
 }
 
 .card-header {
@@ -133,23 +143,46 @@ h1 {
     margin-top: 20px;
 }
 
-/* Changes the width of the cards so they split into one columns at 768px or smaller*/
-/* Credit: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
-@media screen and (min-width: 768px) {
-    body {
-        flex-direction: column;
-    }
+.contact {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
-/* Changes the width of the cards so they split into one columns at 768px or larger*/
+
+.resume {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+/*Styling for contact me and resume sections*/
+li {
+    display: inline-block;
+    padding: 5%;
+    font-size: 1.5em;
+    list-style: none;
+    }
+
+/* Changes the width max 768px or smaller for mobile phones*/
+/* Credit: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
 @media screen and (max-width: 768px) {
     body {
-      width: 50%;
+    width: 100%;
+    }
+}
+/* Changes the width max 992px or larger for tablets*/
+@media screen and (min-width: 768px) {
+    body {
+    width: 50%;   
     }
 }
   /* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
     body {
-      width: 100%;
+    width: 100%;
     }
 }
 
