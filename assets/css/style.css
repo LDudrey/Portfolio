@@ -54,64 +54,49 @@ h1 {
 /*Decorative image under navbar*/
 .hero-image {
     display: flex;
-    flex: 1;
+    justify-content: space-between;
+    /* flex: 1; */
     /*Image courtesy of: Fabrizio Conti 
     https://unsplash.com/@conti_photos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">*/
     background-image: url("../images/fabrizio-conti-kXVogATbFgA-unsplash\ \(2\).jpg");
-    background-repeat: no-repeat;
+    background-size: cover;
 }
  
 /*Styling for Front End Web Developer text*/
 .hero-text {
     font-size: 3em;
-    padding: 225px 50px 0 0;
-    text-align: end;
+    margin: 1vw;
     color: var(--light);
+    align-self: flex-end;
 }
-
 /*Avatar image styling*/
 .avatar {
     border-radius: 50%;
-    width: 30%;
-    height: 30%;
+    width: 20vw;
+    height: auto;
+    margin: 1vw;
 }
 
 /*Directory on left side*/
 .title {
-    font-size: 2.1em;
+    font-size: 1.8em;
     margin: 10px;
     padding-right: 10px;
     flex-basis: 25%;
-    text-align: end;
-    border-right: 3px solid var(--dark);
+    text-align: left;
+    border-bottom: 3px solid var(--dark);
+}
+/*Style for about me paragraph*/
+p {
+    padding: 30px;
+    font-size: 1.75em;
 }
 
-/*Flexbox for About Me section*/
-.about {
-    display: flex;
-    padding: 10px;
-}
-.about p {
-    flex: 1;
-    margin: 30px;
-    font-size: 24px;
-}
-
+/*Flex container for the project image cards*/
 .projects {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
     width: 100vw;
-}
-
-/*Overlay for projec titles*/
-.project-title {
-    font-size: 2.1em;
-    margin: 10px;
-    padding-right: 10px;
-    flex-basis: 25%;
-    text-align: end;
-    border-right: 3px solid var(--dark);
 }
 
 .project-card {
@@ -130,38 +115,14 @@ h1 {
 }
 
 img {
-    width: 100%;
-}
-
-.card-header {
-    border: 3px solid;
     border-radius: 8px;
-    border-color: var(--light);
-    background-color: var(--dark);
-    color: var(--light);
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contact {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.resume {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-
-/*Styling for contact me and resume sections*/
+/*Styling for all lists*/
 li {
     display: inline-block;
-    padding: 5%;
+    padding: 5vw;
     font-size: 1.5em;
     list-style: none;
     }
@@ -174,20 +135,20 @@ li {
     }
 }
 /* Changes the width max 992px or larger for tablets*/
-@media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
     body {
-    width: 50%;   
+    width: 100%;   
     }
 }
-  /* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
+
+/* Changes the width of the cards so they are stacked on top of each other at 992px or larger */
 @media screen and (min-width: 992px) {
     body {
     width: 100%;
     }
 }
 
-/*Photo by https://unsplash.com/@clairebrear?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Claire Brear
+/*
 Photo by https://unsplash.com/es/@vladimir__film?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vladimir Malyutin
 Photo by https://unsplash.com/@angro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antonio Grosz
 Photo by https://unsplash.com/@drscythe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dominik Scythe*/
-        
