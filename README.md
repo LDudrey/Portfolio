@@ -8,7 +8,7 @@ As a future web developer I need a portfolio to showcase my skills and talent to
 
 https://ldudrey.github.io/Portfolio/
 
-Below I'm showing the responsiveness of the webpage for varying devices. 
+Below I'm showing the responsiveness of the webpage for varying devices. The images show the elements responding to decreasing size of viewscreens by stacking elements on top of each other. 
 
 1. Desktop
 ![The Portfolio webpage includes a navigation bar, avatar, a header image, and cards with text and contact information at bottom of the page.](./assets/images/Screenshot%20Desktop%20Lydia%20Dudrey's%20Portfolio.png)
