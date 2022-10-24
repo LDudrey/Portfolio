@@ -33,6 +33,8 @@ https://developer.mozilla.org/en-US/
 
 https://stackoverflow.com
 
+https://css.tricks.com
+
 Many thanks to tutor session with Alexis San Javier and TA assistance from Jose Centurion.
 
 ## License

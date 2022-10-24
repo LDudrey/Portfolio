@@ -113,6 +113,30 @@ p {
     width: 100%;
 }
 
+/*Solution: https://css-tricks.com/almanac/properties/t/transition/*/
+/*Hover transition styling */
+.overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+     -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+
+.big-image:hover .overlay {
+    opacity: 1;
+}
+
+.small-images:hover .overlay {
+    opacity: 1;
+}
+
 /*Project card images have a slight rounded edge*/
 img {
     border-radius: 8px;
