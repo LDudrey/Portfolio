@@ -123,9 +123,6 @@ p {
     height: 100%;
     width: 100%;
     opacity: .8;
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-     -o-transition: background-color 2s ease-out;
     transition: background-color 2s ease-out;
 }
 
