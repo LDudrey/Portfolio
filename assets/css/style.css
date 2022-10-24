@@ -1,9 +1,10 @@
 /* Color and padding*/
 :root {
-    /* declare a variable with `--` syntax */
     --dark: #09488b;
     --light: #fff;
     --dark-text-color: #061f5e;
+    --min-marg-padd: 2vw;
+    --name-job-text: 3em;
 }
 
 /*No margins or padding for main page*/
@@ -20,20 +21,20 @@ body {
 
 /*Main Portfolio name styling*/
 h1 {
-    font-size: 3em;
+    font-size: var(--name-job-text);
     font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
     color: var(--light);
 }
 
 /*Found solution https://stackoverflow.com/questions/57743633/how-do-you-add-a-navigation-bar-on-the-same-line-as-a-header*/
-/*The selectors of .navbar defines top header and nav links*/
+/*The selectors of .navbar defines top header and nav links on right-top side*/
 .navbar {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     background-color: var(--dark);
     width: 100vw;
-    padding: 20px;
+    padding: 3vw;
 }
 
 #navbarlinks {
@@ -41,21 +42,19 @@ h1 {
 }
 
 #navbarlinks li {
-    display:inline-block;
-    padding: 0px 10px;
+    display: inline-block;
+    padding: var(--min-marg-padd);
 }
 
 #navbarlinks a {
-    text-decoration:none;
+    text-decoration: none;
     color: var(--light);
-    padding-right: 10px;
 }
 
 /*Decorative image under navbar*/
 .hero-image {
     display: flex;
     justify-content: space-between;
-    /* flex: 1; */
     /*Image courtesy of: Fabrizio Conti 
     https://unsplash.com/@conti_photos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">*/
     background-image: url("../images/fabrizio-conti-kXVogATbFgA-unsplash\ \(2\).jpg");
@@ -64,8 +63,8 @@ h1 {
  
 /*Styling for Front End Web Developer text*/
 .hero-text {
-    font-size: 3em;
-    margin: 1vw;
+    font-size: var(--name-job-text);
+    margin: var(--min-marg-padd);
     color: var(--light);
     align-self: flex-end;
 }
@@ -74,35 +73,35 @@ h1 {
     border-radius: 50%;
     width: 20vw;
     height: auto;
-    margin: 1vw;
+    margin: var(--min-marg-padd);
 }
 
 /*Directory on left side*/
 .title {
     font-size: 1.8em;
-    margin: 10px;
-    padding-right: 10px;
+    margin: var(--min-marg-padd);
     flex-basis: 25%;
     text-align: left;
     border-bottom: 3px solid var(--dark);
 }
 /*Style for about me paragraph*/
 p {
-    padding: 30px;
+    padding: var(--min-marg-padd);
     font-size: 1.75em;
 }
 
-/*Flex container for the project image cards*/
+/*Flex container parent for the project cards*/
 .projects {
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
 }
 
+/*Flex container child for project cards.*/
 .project-card {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px;
+    margin: 4vw;
     flex: 1;
 }
 
@@ -114,6 +113,7 @@ p {
     width: 100%;
 }
 
+/*Project card images have a slight rounded edge*/
 img {
     border-radius: 8px;
     width: 100%;
@@ -147,8 +147,3 @@ li {
     width: 100%;
     }
 }
-
-/*
-Photo by https://unsplash.com/es/@vladimir__film?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vladimir Malyutin
-Photo by https://unsplash.com/@angro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Antonio Grosz
-Photo by https://unsplash.com/@drscythe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dominik Scythe*/
