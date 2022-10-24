@@ -17,7 +17,8 @@ Below I'm showing the responsiveness of the webpage for varying devices. The ima
 2. iPad Tablet
 ![The Portfolio webpage includes a navigation bar, avatar, a header image, and cards with text and contact information at bottom of the page.](./assets/images/Screenshot%20iPad%20Lydia%20Dudrey's%20Portfolio.png)
 
-&nbsp;
+<br>
+
 3. iPhone 12 Pro
 ![The Portfolio webpage includes a navigation bar, avatar, a header image, and cards with text and contact information at bottom of the page.](./assets/images/Screenshot%20iPhone%2012%20Pro%20Lydia%20Dudrey's%20Portfolio.png)
 
